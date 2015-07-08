@@ -9,7 +9,7 @@
             //route for homepage
             .when('/', {
                 templateUrl : 'pages/home.html',
-                controller  : 'mailController'
+                controller  : 'mainController'
             })
                 .when ('/home', {
                 templateUrl : 'pages/home.html',
