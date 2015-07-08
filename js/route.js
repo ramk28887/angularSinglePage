@@ -7,6 +7,10 @@
 
             //route the pages
             //route for homepage
+            .when('/', {
+                templateUrl : 'pages/home.html',
+                controller  : 'mailController'
+            })
                 .when ('/home', {
                 templateUrl : 'pages/home.html',
                 controller  : 'mainController'
