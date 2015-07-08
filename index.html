@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.ie.min.css"/>
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/search.js"></script>
+    <script src="js/route.js"></script>
+
+    <title>Single Page Application</title>
+</head>
+    <div class="fork">
+        <a href="https://github.com/ramk28887/singlePage" target="_blank">
+        <img src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+        </a>
+    </div>
+    <div id="feedback">
+        <a data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope-o">Feedback</i></a>
+    </div>
+
+    <body ng-controller="mainController">
+
+    <nav class="navbar navbar-default nav1">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#home">Angular Single Page </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="#home"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="#about"><i class="fa fa-shield"></i>About</a></li>
+                <li><a href="#services"><i class="fa fa-cogs"></i>Services</a></li>
+                <li><a href="#contact"><i class="fa fa-comment"></i>Contact Us</a></li>
+                <li>
+                <div class="wrapper">
+                    <div class="icon-search-container" data-ic-class="search-trigger">
+                        <span class="fa fa-search"></span>
+                        <input type="text" class="search-input" data-ic-class="search-input" placeholder="Search"/>
+                        <span class="fa fa-times-circle" data-ic-class="search-clear"></span>
+                    </div></li>
+                </div>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+    <div id="main">
+    <div ng-view></div>
+    </div>
+
+
+
+    <!-- footer -->
+    <div id="footer">
+        <div class="row">
+            <div class="content">
+                <div class="col-lg-12">
+
+                    <!-- lists -->
+                    <div class="col-lg-4">
+                        <ul class="list-unstyled">
+                        <li><b>NAVIGATE</b></li>
+                            <li><a href="#home"> Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="list-unstyled">
+                            <li><b>Stay in the loop</b></li>
+                            <li><input type="text" name="email" id="email"/>&nbsp;<button class="btn btn-info"><a href="Mailto:ramk28887@gmail.com">Send</a></button> </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                    <ul class="list-unstyled">
+                        <li><b>Follow</b></li>
+                        <li><a href="https:/www.facebook.com/" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                        <li><a href="https:/www.twitter.com/" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                        <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">We value your feedback</h3>
+            </div>
+            <div class="modal-body">
+                <form id="myForm" class="rating" action="" method="post">
+                    <label>Overall, how would you rate us:</label>
+                    <label>Excellent
+                        <input type="radio" name="rate" value="excellent"/></label>
+                    <label>Good
+                        <input type="radio" name="rate" value="good"/></label>
+                    <label>Average
+                        <input type="radio" name="rate" value="average"/></label>
+                    <label>Poor
+                        <input type="radio" name="rate" value="poor"/></label><br/>
+                    <label>Was this helpful?:</label>
+                    <label>Yes</label>
+                    <input type="radio" name="help" value="yes"/>
+                    <label>No</label>
+                    <input type="radio" name="help" value="no"/><br/>
+                    <label>Name: </label><br/>
+                    <input type="text" name="name" size="30" class="input" required/><br/>
+                    <label>Email:</label><br/>
+                    <input type="email" name="name" size="30" class="input" required/><br/>
+                    <label> Comments:</label><br/>
+                    <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br/>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <a href="Mailto:ramk28887@gmail.com"><button type="button" class="btn btn-success" data-submit="modal" id="submit">Send Feedback</button></a>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" id="close">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>

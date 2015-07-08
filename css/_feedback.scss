@@ -1,0 +1,35 @@
+#feedback {
+  height: 88px;
+  width: 88px;
+  position: fixed;
+  top: 20%;
+  z-index: 999;
+  transform: rotate(-90deg);
+  a {
+    display: block;
+    background: #f00;
+    color: #fff;
+    padding: 7px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  a:hover {
+    background: #06c;
+    color: #FFF;
+  }
+}
+
+.rating {
+  color: #0066cc;
+  margin-left: 20px;
+  label {
+    display: inline;
+    padding-right: 10px;
+  }
+}
+.fork {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+}

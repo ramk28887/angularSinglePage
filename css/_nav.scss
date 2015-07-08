@@ -1,0 +1,22 @@
+@import "mixin";
+.nav1 {
+  background-image: none;
+  background: transparent;
+  position: relative;
+  font-weight: bold;
+  padding-right: 110px;
+  li{
+    font-weight: 500;
+  }
+}
+
+.conh {
+  height: 500px;
+  border-radius: 20px;
+  padding: 30px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: justify;
+  @include gradient(#D1913C,  #FFD194);
+}
+

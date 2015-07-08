@@ -1,0 +1,126 @@
+#feedback {
+  height: 88px;
+  width: 88px;
+  position: fixed;
+  top: 20%;
+  z-index: 999;
+  transform: rotate(-90deg); }
+  #feedback a {
+    display: block;
+    background: #f00;
+    color: #fff;
+    padding: 7px;
+    font-size: 14px;
+    text-decoration: none; }
+  #feedback a:hover {
+    background: #06c;
+    color: #FFF; }
+
+.rating {
+  color: #0066cc;
+  margin-left: 20px; }
+  .rating label {
+    display: inline;
+    padding-right: 10px; }
+
+.fork {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0; }
+
+.nav1 {
+  background-image: none;
+  background: transparent;
+  position: relative;
+  font-weight: bold;
+  padding-right: 110px; }
+  .nav1 li {
+    font-weight: 500; }
+
+.conh {
+  height: 500px;
+  border-radius: 20px;
+  padding: 30px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: justify;
+  background-color: #e8b168;
+  /* Fallback */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#D1913C), to(#FFD194));
+  background-image: -webkit-linear-gradient(top, #D1913C, #FFD194);
+  background-image: -moz-linear-gradient(top, #D1913C, #FFD194);
+  background-image: -ms-linear-gradient(top, #D1913C, #FFD194);
+  background-image: -o-linear-gradient(top, #D1913C, #FFD194);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$from-color', EndColorStr='$to-color')"; }
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300; }
+
+.wrapper {
+  text-align: right;
+  margin: auto;
+  padding-top: 4px; }
+
+.icon-search-container {
+  display: inline-block;
+  border: 2px solid #d9d9d9;
+  border-radius: 50px;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  transition: width 0.4s ease-out;
+  backface-visibility: hidden; }
+  .icon-search-container.active {
+    width: 285px; }
+    .icon-search-container.active .fa-times-circle {
+      opacity: 1; }
+    .icon-search-container.active .search-input {
+      width: 200px; }
+  .icon-search-container .fa-search {
+    color: #2980b9;
+    font-size: 20px;
+    position: absolute;
+    top: 7px;
+    left: 8px;
+    cursor: pointer; }
+  .icon-search-container .fa-times-circle {
+    opacity: 0;
+    color: #d9d9d9;
+    font-size: 20px;
+    position: absolute;
+    top: 12px;
+    right: 8px;
+    transition: opacity 0.4s ease-out;
+    cursor: pointer; }
+  .icon-search-container .search-input {
+    position: absolute;
+    cursor: default;
+    left: 45px;
+    top: 3px;
+    width: 0;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    line-height: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: width 0.4s ease-out; }
+
+.t1 {
+  width: 500px; }
+  .t1 .pbar {
+    width: 300px; }
+
+#footer {
+  background: #000;
+  background-image: none;
+  color: #fff;
+  height: 180px;
+  width: 100%;
+  bottom: 0px;
+  margin-top: 30px;
+  padding: 20px; }
+
+/*# sourceMappingURL=main.css.map */
